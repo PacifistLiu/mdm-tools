@@ -5,7 +5,7 @@ import (
 )
 
 const (
-	MdmServer      = "https://mdm-v4.media.uni-ulm.de"
+	MdmServer      = "myserver"
 	DeviceInfoPath = "/rest/private/devices/search"
 )
 
