@@ -10,8 +10,8 @@ import (
 
 // GetToken is a function to generate a token for rest api calls
 func GetToken(mdmServer string) (string, error) {
-	username := "apiuser" //username
-	passMD5 := "00ED03A7E7061FDB61C8F11AA03AD245" //md5 hash value of password
+	username := "myuser" //username
+	passMD5 := "myuserpasswordhash" //md5 hash value of password
 
 	// Prepare login payload
 	loginData := map[string]string{
