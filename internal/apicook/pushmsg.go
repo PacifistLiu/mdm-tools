@@ -6,12 +6,12 @@ import (
 
 func PushMsg(messageType string, payload string, deviceNumbers []string, apiPath string) (string, error) {
 	pushPayload := map[string]interface{}{
-		"messageType":   messageType, //"runApp",
-		"payload":       payload,     //`{"pkg": "com.example.adb"}`,
+		"messageType":   messageType,
+		"payload":       payload,
 		"broadcast":     false,
-		"deviceNumbers": deviceNumbers, //[]string{"n24-132-display"},
+		"deviceNumbers": deviceNumbers,
 	}
-	pushURL := fmt.Sprintf("%s%s", MDM_SERVER, apiPath)
+	pushURL := fmt.Sprintf("%s%s", MdmServer, apiPath)
 
 	pushBody, err := HttpReq(pushURL, "POST", pushPayload)
 	if err != nil {

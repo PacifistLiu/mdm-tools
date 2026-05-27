@@ -26,7 +26,7 @@ func HttpReq(apiPath string, requestMethod string, requestBody map[string]interf
 		}
 	}
 
-	bearerToken, err := token.GetToken(MDM_SERVER)
+	bearerToken, err := token.GetToken(MdmServer)
 	if err != nil {
 		return nil, err
 	}

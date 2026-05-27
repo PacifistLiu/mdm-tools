@@ -4,6 +4,11 @@ import (
 	"encoding/json"
 )
 
+const (
+	MdmServer      = "https://mdm-v4.media.uni-ulm.de"
+	DeviceInfoPath = "/rest/private/devices/search"
+)
+
 type Welcome struct {
 	Status  string      `json:"status"`
 	Message interface{} `json:"message"`

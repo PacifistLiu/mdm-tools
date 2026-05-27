@@ -24,7 +24,7 @@ func usage() {
 }
 
 // doCmdline, handle flags and args, return dirs to scan
-func doCmdline() { // map[string]string {
+func doCmdline() {
 
 	log.SetPrefix("")
 	log.SetOutput(os.Stderr)
@@ -90,20 +90,16 @@ func doCmdline() { // map[string]string {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-	/*_, err := mockPushMessage(messageType, payload, devices, apiPath)
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-	}*/
+
 
 }
 
 func mockPushMessage(messageType string, payload string, deviceNumbers []string, apiPath string) (string, error) {
 	pushPayload := map[string]interface{}{
-		"messageType":   messageType, //"runApp",
-		"payload":       payload,     //`{"pkg": "com.example.adb"}`,
+		"messageType":   messageType,
+		"payload":       payload,
 		"broadcast":     false,
-		"deviceNumbers": deviceNumbers, //[]string{"n24-132-display"},
+		"deviceNumbers": deviceNumbers,
 	}
 	fmt.Println(pushPayload)
 	return "", nil

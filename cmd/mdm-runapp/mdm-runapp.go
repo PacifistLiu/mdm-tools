@@ -5,9 +5,10 @@ import (
 )
 
 const (
-	Synopsis     = "A script to print the device names of Legamaster displays.\n\n"
+	Synopsis     = "A script to print the device names.\n\n"
 	ExampleUsage = `
-mdm-runapp [OPTIONS] -a AGENT`
+mdm-runapp [OPTIONS] -a AGENT
+`
 )
 
 func main() {
